@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class ValidShuffle
+class Shuffle
 {
 	
 	public static boolean isInterleaving(String X, String Y, String Z)
