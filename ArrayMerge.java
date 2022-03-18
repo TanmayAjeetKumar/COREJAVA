@@ -1,17 +1,17 @@
 import java.util.*;
  
-class MergingArray{
+class ArrayMerge{
      
-    // Function to merge array in sorted order
+  
     public static void sortedMerge(int a[], int b[],
                                   int res[], int n,
                                             int m)
     {
-        // Sorting a[] and b[]
+       
         Arrays.sort(a);
         Arrays.sort(b);
       
-        // Merge two sorted arrays into res[]
+      
         int i = 0, j = 0, k = 0;
         while (i < n && j < m) {
             if (a[i] <= b[j]) {
@@ -25,21 +25,19 @@ class MergingArray{
             }
         }   
          
-        while (i < n) {  // Merging remaining
-                         // elements of a[] (if any)
+        while (i < n) {  
             res[k] = a[i];
             i += 1;
             k += 1;
         }   
-        while (j < m) {   // Merging remaining
-                         // elements of b[] (if any)
+        while (j < m) {   
             res[k] = b[j];
             j += 1;
             k += 1;
         }
     }
      
-    /* Driver program to test above function */
+  
     public static void main(String[] args)
     {
         int a[] = { 10, 5, 15 };
@@ -47,7 +45,7 @@ class MergingArray{
         int n = a.length;
         int m = b.length;
       
-        // Final merge list
+       
         int res[] = new int[n + m];
         sortedMerge(a, b, res, n, m);
       
@@ -60,7 +58,7 @@ class MergingArray{
         int n1 = a1.length;
         int m1 = b1.length;
       
-        // Final merge list
+      
         int res1[] = new int[n1 + m1];
         sortedMerge(a1, b1, res1, n1, m1);
       
